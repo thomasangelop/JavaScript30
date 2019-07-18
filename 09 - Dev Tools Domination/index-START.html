@@ -18,29 +18,43 @@
     }
 
     // Regular
-
+    console.log('hello');
     // Interpolated
-
+    console.log('hello I am a %s string!', '☺️')
     // Styled
-
+    console.log('%c text', 'font-size:20px;')
     // warning!
-
+    console.warn('oh noo');
     // Error :|
-
+    console.error('Nope Error!');
     // Info
-
+    console.info('Crocodiles');
     // Testing
-
+    console.assert( 1=== 1, 'that is wrong!');
     // clearing
-
+    //console.clear();
     // Viewing DOM Elements
-
+    //console.log(p);
+    //console.dir(p);
     // Grouping together
-
+    dogs.forEach(dog => {
+      console.group(`${dog.name}`);
+      console.log(`This is ${dog.name}`);
+      console.log(`${dog.name} is ${dog.age} years old`);
+      console.groupEnd(`${dog.name}`);
+    })
     // counting
-
+    console.count('1')
     // timing
+    console.time('fetching data');
+    fetch('https://api.github.com/users/thomasangelop')
+      .then(data => data.json())
+      .then(data => {
+        console.timeEnd('fetching data');
+        console.log(data);
+      });
 
+      console.table(dogs)
   </script>
 </body>
 </html>
