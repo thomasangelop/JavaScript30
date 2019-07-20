@@ -25,7 +25,7 @@ function skip() {
 }
 
 function handleRangeUpdate() {
-    console.log(this.value);
+    video[this.name] = this.avlue;
 }
 
 // Hook up the event listeners
