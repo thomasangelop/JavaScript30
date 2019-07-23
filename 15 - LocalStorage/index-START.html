@@ -47,10 +47,11 @@
     platesList.innerHTML = plates.map((plate, i) => {
       return `
         <li>
-          <label for="">${plate.text}</label>
+          <input type="checkbox" data-inex=${i} id="item${i}" ${plate.done ? 'checked' : ''}/>
+          <label for="item${i}">${plate.text}</label>
         </li>
       `;
-    }).join(''); // puts everything in one string
+    }).join(''); // .join puts everything in one string
   }
 
   addItems.addEventListener('submit', addItem);
